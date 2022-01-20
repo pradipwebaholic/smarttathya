@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { Header, Home, About } from './';
+import { Header, Home, About,TitlebarImageList } from './';
 import { getPhotos } from '../actions/';
 const Dashboard = () => {
   const [inputs, setInputs] = useState('');
@@ -45,7 +45,9 @@ const Dashboard = () => {
         </NavLink>
         <br />
         <Outlet />
-        <GenerateImagelist images={images} />
+       
+        <TitlebarImageList  images={images}/>
+
         <div>
           <button onClick={handleTwo}>Show Two</button>{' '}
           <button onClick={handleThree}>Show Three</button>
@@ -55,8 +57,7 @@ const Dashboard = () => {
   );
 };
 export default Dashboard;
-const GenerateImagelist = ({ images }) =>
-  images.map((x) => <img key={x.id} src={x.thumbnailUrl} />);
+
 
 const style = {
   ul: {

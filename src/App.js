@@ -7,6 +7,7 @@ import { Layout, Header, Home, About, Aside, Dashboard } from './components/';
 import Store from './store/Store';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import './style.css';
+
 import fontawesome from '@fortawesome/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare } from '@fortawesome/fontawesome-free-solid';
