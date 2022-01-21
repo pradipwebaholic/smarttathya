@@ -14,7 +14,7 @@ export default function TitlebarImageList({images}) {
       {images.map((item) => (
         <ImageListItem key={item.img}>
           <img
-            src={`${item.thumbnailUrl}`}
+            src={`${item.thumbnailUrl}`} key={item.id}
             srcSet={`${item.thumbnailUrl}`}
             alt={item.title}
             loading="lazy"
